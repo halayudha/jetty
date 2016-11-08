@@ -135,7 +135,7 @@ public class FileUploadServlet extends HttpServlet {
                         System.out.println(fileName);
                         
                         //uploadPath = "/home/hduser/" + jobID + File.separator + mapperID + File.separator + "reduce_" + fileName.substring(fileName.length()-1);
-                        uploadPath = "/home/hduser/" + jobID + File.separator + mapperID + File.separator + "reduce_" + partitionNo;
+                        uploadPath = "/home/hduser/" + jobID + File.separator + mapperID.substring(0, 35) + File.separator + "reduce_" + partitionNo;
                         //creates the directory if it does no exist
                         File uploadDir = new File(uploadPath);
                         if (!uploadDir.exists()){
