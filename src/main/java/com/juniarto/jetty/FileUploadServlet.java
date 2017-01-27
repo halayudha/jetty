@@ -27,9 +27,9 @@ import org.eclipse.jetty.http.HttpStatus;
 public class FileUploadServlet extends HttpServlet {
     private static final String UPLOAD_DIRECTORY = "upload";
     
-    private static final int MEMORY_THRESHOLD = 1024 * 1024 * 3; //3MB
-    private static final int MAX_FILE_SIZE    = 1024 * 1024 * 6000; //40MB
-    private static final int MAX_REQUEST_SIZE = 1024 * 1024 * 6000; //50MB
+    private static final int MEMORY_THRESHOLD = 1024 * 1024 * 250; //250MB
+    private static final int MAX_FILE_SIZE    = 1024 * 1024 * 300; //300MB
+    private static final int MAX_REQUEST_SIZE = 1024 * 1024 * 400; //400MB
     
     protected void doPost(HttpServletRequest request,
                           HttpServletResponse response) throws IOException{
